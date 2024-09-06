@@ -1,0 +1,10 @@
+[group1]
+18.12.96.10:6666 runsible_user=user runsible_password=password
+
+[group2]
+server1.example.com:2200 runsible_user=user3 runsible_password=password3
+server2.example.com runsible_user=user4
+
+[group_of_groups]
+group1
+group2
