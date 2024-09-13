@@ -4,6 +4,11 @@
 [group2]
 server1.example.com:2200 runsible_user=user3 runsible_password=password3
 server2.example.com runsible_user=user4
+10.0.1.11 runsible_user=root runsible_password=Password
+10.0.1.12 ansible_user=root ansible_password=Password
+10.0.1.{13..14} ansible_user=root ansible_password=Password
+10.0.1.{15:22} ansible_user=root ansible_password=Password
+
 
 [group_of_groups]
 group1
