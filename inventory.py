@@ -64,7 +64,7 @@ def read_hosts(fhosts):
                             host_info['host'] = host_entry
                             host_info['port'] = default_ssh_port
 
-                        # Чтение runsible_user/ansible_user и runsible_password/ansible_password
+                        # Чтение параметров хоста
                         for part in params:
                             if '=' in part:
                                 key, value = part.split('=', 1)
@@ -72,6 +72,8 @@ def read_hosts(fhosts):
                                     host_info['username'] = value
                                 elif key in ['runsible_password', 'ansible_password']:
                                     host_info['password'] = value
+                                elif key in ['runsible_ssh_key', 'ansible_ssh_private_key_file']:
+                                    host_info['ssh_key'] = os.path.expanduser(value)
 
                         # Добавляем хост в текущую группу
                         hosts[current_group].append(host_info)

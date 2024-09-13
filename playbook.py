@@ -12,16 +12,29 @@ def execute_remote_command(client, command):
         print(f"Output:\n{output.strip()}")
 
 # Функция для загрузки и выполнения скрипта
-def upload_and_execute_script(host_info, key_filename, local_script, remote_script, bash_command=None):
+def upload_and_execute_script(host_info, default_key_filename, local_script, remote_script, bash_command=None):
     client = paramiko.SSHClient()
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
     try:
+        # Определяем SSH-ключ для подключения
+        ssh_key = host_info.get('ssh_key', default_key_filename)
+
         # Подключение с использованием ключа или логина и пароля
         if host_info.get('username') and host_info.get('password'):
-            client.connect(host_info['host'], username=host_info['username'], password=host_info['password'], port=host_info['port'])
+            client.connect(
+                hostname=host_info['host'],
+                username=host_info['username'],
+                password=host_info['password'],
+                port=host_info['port']
+            )
         else:
-            client.connect(host_info['host'], username=host_info.get('username'), key_filename=key_filename, port=host_info['port'])
+            client.connect(
+                hostname=host_info['host'],
+                username=host_info.get('username'),
+                key_filename=ssh_key,
+                port=host_info['port']
+            )
 
         if bash_command:
             # Выполнение команды напрямую

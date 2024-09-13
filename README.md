@@ -136,6 +136,8 @@
 <div class="overflow-y-auto p-4" dir="ltr"><span class="hljs-number">92.168</span>.<span class="hljs-number">1</span>.{<span class="hljs-number">5</span>..<span class="hljs-number">7</span>}:<span class="hljs-number">2222</span> ansible_user=user3 ansible_password=pass3 [group2]</div>
 <div class="overflow-y-auto p-4" dir="ltr">server{<span class="hljs-number">01</span>..<span class="hljs-number">05</span>}<span class="hljs-selector-class">.example</span><span class="hljs-selector-class">.com</span> ansible_user=admin ansible_password=adminpass</div>
 </div>
+host1.example.com runsible_user=user1 runsible_ssh_key=~/.ssh/host1_key
+10.0.0.1 ansible_user=user2 ansible_ssh_private_key_file=/path/to/key2
 <h3><strong>Особенности:</strong></h3>
 <ul>
 <li><strong>Группы хостов</strong> определяются в квадратных скобках <code>[group_name]</code>.</li>
