@@ -1,7 +1,8 @@
 import argparse
 import os
 import sys
-from threading import Thread
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import datetime
 from inventory import read_hosts
 from playbook import upload_and_execute_script
 
@@ -46,27 +47,50 @@ def main():
         local_script_path = None
         remote_script_path = None
 
-    threads = []
+    # Создаём директорию для логов, если она не существует
+    log_dir = os.path.join(SCRIPT_DIR, 'tmp')
+    if not os.path.exists(log_dir):
+        os.makedirs(log_dir)
 
-    # Проходим по каждому хосту в группе и создаём поток
-    for host_info in selected_hosts:
-        print(f"Scheduling connection to {host_info['host']} on port {host_info['port']}...")
-        thread = Thread(
-            target=upload_and_execute_script,
-            args=(
+    # Формируем имя файла лога с текущей датой
+    date_str = datetime.now().strftime('%Y%m%d%H%M%S')
+    log_file_path = os.path.join(log_dir, f'.log{date_str}.log')
+
+    # Словарь для хранения логов от каждого хоста
+    host_logs_dict = {}
+
+    # Проходим по каждому хосту в группе и создаём задачи для пула потоков
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        future_to_host = {
+            executor.submit(
+                upload_and_execute_script,
                 host_info,
                 args.key,
                 local_script_path,
                 remote_script_path,
-            ),
-            kwargs={'bash_command': args.bash}
-        )
-        threads.append(thread)
-        thread.start()
+                bash_command=args.bash
+            ): host_info for host_info in selected_hosts
+        }
 
-    # Ожидаем завершения всех потоков
-    for thread in threads:
-        thread.join()
+        for future in as_completed(future_to_host):
+            host_info = future_to_host[future]
+            host = host_info['host']
+            try:
+                host_name, host_logs = future.result()
+                host_logs_dict[host_name] = host_logs
+            except Exception as exc:
+                print(f"[{host}] Generated an exception: {exc}")
+
+    # Пишем логи в файл и выводим на консоль
+    with open(log_file_path, 'w') as log_file:
+        for host in sorted(host_logs_dict.keys()):
+            log_file.write(f"=== Logs for {host} ===\n")
+            log_file.write('\n'.join(host_logs_dict[host]))
+            log_file.write('\n\n')
+
+    # Выводим содержимое лога на консоль
+    with open(log_file_path, 'r') as log_file:
+        print(log_file.read())
 
 if __name__ == '__main__':
     main()
