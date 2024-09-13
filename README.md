@@ -48,7 +48,7 @@
 <div class="dark bg-gray-950 contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative">
 <div class="flex items-center text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9">&nbsp;</div>
 <div class="sticky top-9 md:top-[5.75rem]">&nbsp;</div>
-<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-css">python <span class="hljs-selector-tag">main</span><span class="hljs-selector-class">.py</span> -key /path/<span class="hljs-selector-tag">to</span>/private_key </code></div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-css">python main.py -key /path/to/private_key </code></div>
 </div>
 </li>
 </ul>
@@ -60,7 +60,7 @@
 <div class="dark bg-gray-950 contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative">
 <div class="flex items-center text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9">&nbsp;</div>
 <div class="sticky top-9 md:top-[5.75rem]">&nbsp;</div>
-<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-csharp">python main.py -group mygroup -bash <span class="hljs-string">"echo 'Hello World'"</span> </code></div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-csharp">python main.py -group mygroup -bash "echo 'Hello World'"</code></div>
 </div>
 </li>
 <li>
@@ -101,7 +101,7 @@
 <div class="dark bg-gray-950 contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative">
 <div class="flex items-center text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9">&nbsp;</div>
 <div class="sticky top-9 md:top-[5.75rem]">&nbsp;</div>
-<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-csharp">python main.py -group servers -bash <span class="hljs-string">"uptime"</span> </code></div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-csharp">python main.py -group servers -bash "uptime"</code></div>
 </div>
 <p><em>Выполнит команду <code>uptime</code> на всех хостах, входящих в группу <code>servers</code>.</em></p>
 </li>
@@ -119,7 +119,7 @@
 <div class="dark bg-gray-950 contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative">
 <div class="flex items-center text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9">&nbsp;</div>
 <div class="sticky top-9 md:top-[5.75rem]">&nbsp;</div>
-<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-bash">python main.py -group dbservers -i ./my_hosts -key ~/.ssh/db_key -bash <span class="hljs-string">"df -h"</span> </code></div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-bash">python main.py -group dbservers -i ./my_hosts -key ~/.ssh/db_key -bash "df -h" </code></div>
 </div>
 <p><em>Использует файл инвентаризации <code>./my_hosts</code> и SSH-ключ <code>~/.ssh/db_key</code> для подключения к хостам из группы <code>dbservers</code> и выполняет команду <code>df -h</code>.</em></p>
 </li>
