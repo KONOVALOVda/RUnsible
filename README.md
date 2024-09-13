@@ -12,6 +12,15 @@
 <div>1. Нет привязанности к YAML формату. Теперь неважно правильно поставили пробел или Нет.</div>
 <div>2. Понятный CallBack без плагинов. Теперь все логи можно увидеть так, как они были. Больше никакой непонятной чихарды</div>
 </div>
+<li>
+<p><strong>Запустите инструмент с необходимыми параметрами:</strong></p>
+<div class="dark bg-gray-950 contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative">
+<div class="flex items-center text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9">&nbsp;</div>
+<div class="sticky top-9 md:top-[5.75rem]">&nbsp;</div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-csharp">python main.py -group mygroup -bash "hostname" </code></div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-csharp">python main.py -group mygroup -sh ./script.sh </code></div>
+</div>
+</li>
 <h2><strong>Возможности и параметры командной строки</strong></h2>
 <h3><strong>Общие параметры</strong></h3>
 <ul>
@@ -178,15 +187,7 @@
 <li>
 <p><strong>Создайте файл инвентаризации <code>hosts</code> или используйте свой, указав его с помощью параметра <code>-i</code>.</strong></p>
 </li>
-<li>
-<p><strong>Запустите инструмент с необходимыми параметрами:</strong></p>
-<div class="dark bg-gray-950 contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative">
-<div class="flex items-center text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9">&nbsp;</div>
-<div class="sticky top-9 md:top-[5.75rem]">&nbsp;</div>
-<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-csharp">python main.py -group mygroup -bash "hostname" </code></div>
-<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-csharp">python main.py -group mygroup -sh ./script.sh </code></div>
-</div>
-</li>
+
 </ol>
 <h2><strong>Обратная связь</strong></h2>
 <p>Если у вас есть вопросы или предложения по улучшению RUNSIBLE, пожалуйста, обращайтесь!</p>
