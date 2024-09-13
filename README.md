@@ -39,7 +39,7 @@
 <div class="dark bg-gray-950 contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative">
 <div class="flex items-center text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9">&nbsp;</div>
 <div class="sticky top-9 md:top-[5.75rem]">&nbsp;</div>
-<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-css">python <span class="hljs-selector-tag">main</span><span class="hljs-selector-class">.py</span> -<span class="hljs-selector-tag">i</span> /path/<span class="hljs-selector-tag">to</span>/my_hosts </code></div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-css">python main.py -i /path/to/my_hosts </code></div>
 </div>
 </li>
 <li>
@@ -78,7 +78,7 @@
 <div class="dark bg-gray-950 contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative">
 <div class="flex items-center text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9">&nbsp;</div>
 <div class="sticky top-9 md:top-[5.75rem]">&nbsp;</div>
-<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-sql">python main.py <span class="hljs-operator">-</span>group mygroup <span class="hljs-operator">-</span>sh script.sh <span class="hljs-operator">-</span>remote_path <span class="hljs-operator">/</span>home<span class="hljs-operator">/</span>user<span class="hljs-operator">/</span>scripts </code></div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-sql">python main.py -group mygroup -sh script.sh -remote_path /home/user/scripts </code></div>
 </div>
 </li>
 </ul>
