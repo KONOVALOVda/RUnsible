@@ -21,7 +21,7 @@
 <div class="dark bg-gray-950 contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative">
 <div class="flex items-center text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9">&nbsp;</div>
 <div class="sticky top-9 md:top-[5.75rem]">&nbsp;</div>
-<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-csharp">python main.py -<span class="hljs-keyword">group</span> mygroup </code></div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-csharp">python main.py -group mygroup </code></div>
 </div>
 </li>
 <li>
@@ -51,7 +51,7 @@
 <div class="dark bg-gray-950 contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative">
 <div class="flex items-center text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9">&nbsp;</div>
 <div class="sticky top-9 md:top-[5.75rem]">&nbsp;</div>
-<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-csharp">python main.py -<span class="hljs-keyword">group</span> mygroup -bash <span class="hljs-string">"echo 'Hello World'"</span> </code></div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-csharp">python main.py -group mygroup -bash <span class="hljs-string">"echo 'Hello World'"</span> </code></div>
 </div>
 </li>
 <li>
@@ -60,7 +60,7 @@
 <div class="dark bg-gray-950 contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative">
 <div class="flex items-center text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9">&nbsp;</div>
 <div class="sticky top-9 md:top-[5.75rem]">&nbsp;</div>
-<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-csharp">python main.py -<span class="hljs-keyword">group</span> mygroup -sh script.sh </code></div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-csharp">python main.py -group mygroup -sh script.sh </code></div>
 </div>
 </li>
 <li>
@@ -69,7 +69,7 @@
 <div class="dark bg-gray-950 contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative">
 <div class="flex items-center text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9">&nbsp;</div>
 <div class="sticky top-9 md:top-[5.75rem]">&nbsp;</div>
-<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-sql">python main.py <span class="hljs-operator">-</span><span class="hljs-keyword">group</span> mygroup <span class="hljs-operator">-</span>sh script.sh <span class="hljs-operator">-</span>remote_path <span class="hljs-operator">/</span>home<span class="hljs-operator">/</span><span class="hljs-keyword">user</span><span class="hljs-operator">/</span>scripts </code></div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-sql">python main.py <span class="hljs-operator">-</span>group mygroup <span class="hljs-operator">-</span>sh script.sh <span class="hljs-operator">-</span>remote_path <span class="hljs-operator">/</span>home<span class="hljs-operator">/</span>user<span class="hljs-operator">/</span>scripts </code></div>
 </div>
 </li>
 </ul>
@@ -81,7 +81,7 @@
 <div class="dark bg-gray-950 contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative">
 <div class="flex items-center text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9">&nbsp;</div>
 <div class="sticky top-9 md:top-[5.75rem]">&nbsp;</div>
-<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-bash">python main.py -<span class="hljs-built_in">help</span> </code></div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-bash">python main.py -help </code></div>
 </div>
 </li>
 </ul>
@@ -92,7 +92,7 @@
 <div class="dark bg-gray-950 contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative">
 <div class="flex items-center text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9">&nbsp;</div>
 <div class="sticky top-9 md:top-[5.75rem]">&nbsp;</div>
-<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-csharp">python main.py -<span class="hljs-keyword">group</span> servers -bash <span class="hljs-string">"uptime"</span> </code></div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-csharp">python main.py -group servers -bash <span class="hljs-string">"uptime"</span> </code></div>
 </div>
 <p><em>Выполнит команду <code>uptime</code> на всех хостах, входящих в группу <code>servers</code>.</em></p>
 </li>
@@ -101,7 +101,7 @@
 <div class="dark bg-gray-950 contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative">
 <div class="flex items-center text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9">&nbsp;</div>
 <div class="sticky top-9 md:top-[5.75rem]">&nbsp;</div>
-<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-csharp">python main.py -<span class="hljs-keyword">group</span> webservers -sh deploy.sh </code></div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-csharp">python main.py -group webservers -sh deploy.sh </code></div>
 </div>
 <p><em>Загрузит локальный скрипт <code>deploy.sh</code> на удаленные хосты из группы <code>webservers</code>, выполнит его и удалит после выполнения.</em></p>
 </li>
@@ -183,8 +183,8 @@
 <div class="dark bg-gray-950 contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative">
 <div class="flex items-center text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9">&nbsp;</div>
 <div class="sticky top-9 md:top-[5.75rem]">&nbsp;</div>
-<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-csharp">python main.py -<span class="hljs-keyword">group</span> mygroup -bash "hostname" </code></div>
-<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-csharp">python main.py -<span class="hljs-keyword">group</span> mygroup -sh ./script.sh </code></div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-csharp">python main.py -group mygroup -bash "hostname" </code></div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-csharp">python main.py -group mygroup -sh ./script.sh </code></div>
 </div>
 </li>
 </ol>
