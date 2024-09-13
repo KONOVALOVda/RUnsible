@@ -13,7 +13,7 @@
 <div>2. Понятный CallBack без плагинов. Теперь все логи можно увидеть так, как они были. Больше никакой непонятной чихарды</div>
 </div>
 <li>
-<p><strong>Запустите инструмент с необходимыми параметрами:</strong></p>
+<p><strong>Запустите инструмент:</strong></p>
 <div class="dark bg-gray-950 contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative">
 <div class="flex items-center text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9">&nbsp;</div>
 <div class="sticky top-9 md:top-[5.75rem]">&nbsp;</div>
