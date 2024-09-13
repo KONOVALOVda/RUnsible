@@ -1,6 +1,7 @@
 import argparse
 import os
 import sys
+from threading import Thread
 from inventory import read_hosts
 from playbook import upload_and_execute_script
 
@@ -41,23 +42,31 @@ def main():
             sys.exit(1)
         script_name = os.path.basename(local_script_path).lstrip('/')
         remote_script_path = f"{args.remote_path.rstrip('/')}/{script_name}"
-        print(f"Local script path: {local_script_path}")
-        print(f"Script name: {script_name}")
-        print(f"Remote script path: {remote_script_path}")
     else:
         local_script_path = None
         remote_script_path = None
 
-    # Проходим по каждому хосту в группе
+    threads = []
+
+    # Проходим по каждому хосту в группе и создаём поток
     for host_info in selected_hosts:
-        print(f"Connecting to {host_info['host']} on port {host_info['port']}...")
-        upload_and_execute_script(
-            host_info,
-            args.key,
-            local_script_path,
-            remote_script_path,
-            bash_command=args.bash
+        print(f"Scheduling connection to {host_info['host']} on port {host_info['port']}...")
+        thread = Thread(
+            target=upload_and_execute_script,
+            args=(
+                host_info,
+                args.key,
+                local_script_path,
+                remote_script_path,
+            ),
+            kwargs={'bash_command': args.bash}
         )
+        threads.append(thread)
+        thread.start()
+
+    # Ожидаем завершения всех потоков
+    for thread in threads:
+        thread.join()
 
 if __name__ == '__main__':
     main()
