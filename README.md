@@ -1,7 +1,7 @@
 # RUNSIBLE / RUnsible / RU.NSIBLE 
 
 <p dir="auto" style="text-align: center;"><em>Данный проект написан ПОЛНОСТЬЮ с нуля</em></p>
-<p dir="auto" style="text-align: center;">Написал инженер-программист&nbsp;<strong>Ткачук (Коновалов) Денис</strong>&nbsp;-&nbsp;<a href="mailto:where.adm@mail.ru">where.adm@mail.ru</a></p>
+<p dir="auto" style="text-align: center;">Написал инженер-программист&nbsp;<strong>Коновалов Денис</strong>&nbsp;-&nbsp;<a href="mailto:where.adm@mail.ru">where.adm@mail.ru</a></p>
 
 <p dir="auto">&nbsp;</p>
 
