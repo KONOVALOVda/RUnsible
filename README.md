@@ -1,7 +1,6 @@
 # RUNSIBLE / RUnsible / RU.NSIBLE 
 
-<p dir="auto" style="text-align: center;"><em>Данный проект написан ПОЛНОСТЬЮ с нуля</em></p>
-<p dir="auto" style="text-align: center;">Написал инженер-программист&nbsp;<strong>Коновалов Денис</strong>&nbsp;-&nbsp;<a href="mailto:where.adm@mail.ru">where.adm@mail.ru</a></p>
+## Данный проект написан ПОЛНОСТЬЮ с нуля
 
 <p dir="auto">&nbsp;</p>
 
@@ -194,3 +193,4 @@ host1.example.com runsible_user=user1 runsible_ssh_key=~/.ssh/host1_key
 <h2><strong>Обратная связь</strong></h2>
 <p>Если у вас есть вопросы или предложения по улучшению RUNSIBLE, пожалуйста, обращайтесь!</p>
 <a href="mailto:where.adm@mail.ru">where.adm@mail.ru</a>
+<p dir="auto" style="text-align: center;">Написал инженер-программист&nbsp;<strong>Коновалов Денис</strong>&nbsp;-&nbsp;<a href="mailto:where.adm@mail.ru">where.adm@mail.ru</a></p>
