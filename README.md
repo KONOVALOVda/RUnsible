@@ -192,5 +192,4 @@ host1.example.com runsible_user=user1 runsible_ssh_key=~/.ssh/host1_key
 </ol>
 <h2><strong>Обратная связь</strong></h2>
 <p>Если у вас есть вопросы или предложения по улучшению RUNSIBLE, пожалуйста, обращайтесь!</p>
-<a href="mailto:where.adm@mail.ru">where.adm@mail.ru</a>
-<p dir="auto" style="text-align: center;">Написал инженер-программист&nbsp;<strong>Коновалов Денис</strong>&nbsp;-&nbsp;<a href="mailto:where.adm@mail.ru">where.adm@mail.ru</a></p>
+<p dir="auto" style="text-align: center;">by Коновалов Денис Александрович</strong>&nbsp;-&nbsp;<a href="mailto:where.adm@mail.ru">where.adm@mail.ru</a></p>
